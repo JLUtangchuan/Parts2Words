@@ -1,0 +1,71 @@
+GENERAL:
+  home: /{your path}
+  shapenet_path: data/shapenet
+  save_dir: data/models/shapenet/part2word # epoch
+  pkl_path: shapenetv2_level_1.pkl
+  resume: runs/runX/checkpoint/model_best.pth.tar # ckpt
+  eval_when_training: True
+
+  # python file
+  dataloader: part2word.dataloaders.data
+  models: part2word.models.model
+  evals: part2word.evals.eval
+
+MATCHING:
+  matching_method: emd
+  # match_method -> scan|emd
+  # seg
+  inp_size: 6
+  SEG_NUM: 17
+  num_points: 2500
+  min_point_rate: 0.01
+  K: 10 # part
+
+  # model
+  img_dim: 512
+  word_dim: 512
+  embed_size: 1024
+
+  num_layers: 1
+  lambda_lse: 6.0
+  lambda_softmax: 9.0
+  
+  bi_gru: True
+  max_violation: True
+  no_imgnorm: False
+  no_txtnorm: False
+
+  raw_feature_norm: clipped_l2norm
+  # raw_feature_norm -> clipped_l2norm|l2norm|clipped_l1norm|l1norm|no_norm|softmax
+  agg_func: LogSumExp
+  # agg_func -> LogSumExp|Mean|Max|Sum
+  cross_attn: t2i
+  # cross_attn -> i2t|t2i|dual
+  precomp_enc_type: rgb
+
+  # data
+  workers: 8
+  batch_size: 128
+  data_split:
+    train_data:
+      - /{your path}/data/shapenet/split_shape_captioner/train_03001627.txt
+      - /{your path}/data/shapenet/split_shape_captioner/train_04379243.txt
+    test_data:
+      - /{your path}/data/shapenet/split_shape_captioner/test_03001627.txt
+      - /{your path}/data/shapenet/split_shape_captioner/test_04379243.txt
+
+  # train
+  num_epochs: 90
+  stage_1_epoch: 50
+  margin: 0.2
+  grad_clip: 2.0
+  learning_rate: 0.001
+  alpha: 40.0
+
+
+  # eval
+  log_step: 450
+  val_step: 56
+
+
+
