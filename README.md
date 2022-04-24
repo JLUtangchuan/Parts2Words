@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 
 ## Download data
-We pack the shapenet data with segmentation annotation in h5 file, you can download the h5 file from [here]()
+We pack the shapenet data with segmentation annotation in h5 file, you can download the h5 file from [here](https://drive.google.com/file/d/11uSuGUxV7WSM3Cogh4tZmt37ZPYCffVE/view?usp=sharing)
 
 
 ```
