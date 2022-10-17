@@ -19,7 +19,7 @@ from torch.nn.utils.clip_grad import clip_grad_norm_
 from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 from torch.nn.utils.weight_norm import weight_norm
 from torch.nn import functional as F
-from models.model_utils.emd_util import emd_inference_qpth, emd_inference_opencv_test
+from part2word.models.model_utils.emd_util import emd_inference_qpth, emd_inference_opencv_test
 from torch.nn.utils.rnn import pad_sequence
 
 

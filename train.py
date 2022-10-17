@@ -27,7 +27,6 @@ from rich.progress import track
 
 from utils.common_tools import draw_table, set_seed, save_checkpoint, AverageMeter, LogCollector
 from utils.config import cfg_match as cfg
-from utils.vocab import Vocabulary, deserialize_vocab
 dataloader_module = importlib.import_module(cfg.dataloader)
 model_module = importlib.import_module(cfg.models)
 eval_module = importlib.import_module(cfg.evals)
