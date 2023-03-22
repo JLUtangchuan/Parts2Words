@@ -2,7 +2,7 @@
 
 ## Introduction
 This is the source code of Parts2Words: Learning Joint Embedding of Point Clouds and Texts by Bidirectional Matching between Parts and Words, an approch for 3D Shape-Text Matching based on local based matching method. 
-![](./doc/teaser.png)
+![](./doc/parts2words.jpg)
 
 ## Requirements
 
