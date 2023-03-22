@@ -1,7 +1,7 @@
-# Part2Word: Learning Joint Embedding of Point Clouds and Text by Bidirectional Matching between Parts and Words
+# Parts2Words: Learning Joint Embedding of Point Clouds and Texts by Bidirectional Matching between Parts and Words
 
 ## Introduction
-This is the source code of Part2Word: Learning Joint Embedding of Point Clouds and Text by Bidirectional Matching between Parts and Words, an approch for Shape-Text Matching based on local based matching method. 
+This is the source code of Parts2Words: Learning Joint Embedding of Point Clouds and Texts by Bidirectional Matching between Parts and Words, an approch for 3D Shape-Text Matching based on local based matching method. 
 ![](./doc/teaser.png)
 
 ## Requirements
@@ -31,28 +31,24 @@ data
 ```
 ## Set configure file
 
-set data path in `conig/part2word_default.yaml`.
+set data path in `config/parts2words_default.yaml`.
 
 
 ## Train model
 ```
-python train.py --config conig/part2word_default.yaml
+python train.py --config conig/parts2words_default.yaml
 ```
 
 ## evaluate model
 ```
-python val.py --config conig/part2word_default.yaml
+python val.py --config conig/parts2words_default.yaml
 ```
-
-
-## Acknowledgments
-Our code is built on top of the [SCAN](https://github.com/kuanghuei/SCAN) in PyTorch.
 
 ## Reference
 If you found this code useful, please cite the following paper:
 ```
-@article{tang2021part2word,
-  title={Part2Word: Learning Joint Embedding of Point Clouds and Text by Matching Parts to Words},
+@article{tang2021parts2words,
+  title={parts2words: Learning Joint Embedding of Point Clouds and Text by Matching Parts to Words},
   author={Tang, Chuan and Yang, Xi and Wu, Bojian and Han, Zhizhong and Chang, Yi},
   journal={arXiv preprint arXiv:2107.01872},
   year={2021}

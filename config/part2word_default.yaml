@@ -1,15 +1,15 @@
 GENERAL:
   home: /{your path}
   shapenet_path: data/shapenet
-  save_dir: data/models/shapenet/part2word # epoch
+  save_dir: data/models/shapenet/parts2words # epoch
   pkl_path: shapenetv2_level_1.pkl
   resume: runs/runX/checkpoint/model_best.pth.tar # ckpt
   eval_when_training: True
 
   # python file
-  dataloader: part2word.dataloaders.data
-  models: part2word.models.model
-  evals: part2word.evals.eval
+  dataloader: parts2words.dataloaders.data
+  models: parts2words.models.model
+  evals: parts2words.evals.eval
 
 MATCHING:
   matching_method: emd
